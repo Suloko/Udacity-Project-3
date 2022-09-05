@@ -267,7 +267,7 @@ jobs:
     steps:
       - checkout
       - add_ssh_keys:
-          fingerprints: ["04:18:e8:92:12:c9:16:e3:5a:0c:06:46:e4:e6:3f:40"]
+          fingerprints: ["e6:96:b1:f6:3c:fc:c5:9e:1d:a5:92:07:0e:0e:9a:b0"]
       - attach_workspace:
           at: ~/
       - run: 
@@ -320,7 +320,7 @@ jobs:
             sleep 3m
             if curl "${API_URL}/api/status" | grep "ok"
             then
-              return 0
+              return 1
             else
               return 1
             fi
